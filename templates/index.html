@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nhập thông tin của Iris</h2>
+        <form action="/predict" method="POST">
+            <label for="sepal_length">Sepal Length (cm):</label>
+            <input type="text" id="sepal_length" name="sepal_length" required>
+            
+            <label for="sepal_width">Sepal Width (cm):</label>
+            <input type="text" id="sepal_width" name="sepal_width" required>
+            
+            <label for="petal_length">Petal Length (cm):</label>
+            <input type="text" id="petal_length" name="petal_length" required>
+            
+            <label for="petal_width">Petal Width (cm):</label>
+            <input type="text" id="petal_width" name="petal_width" required>
+            
+            <input type="submit" value="Dự đoán">
+        </form>
+        <div class="footer">
+            <p>&copy; Sơn Văn Cường - B2106785</p>
+        </div>
+    </div>
+</body>
+</html>
