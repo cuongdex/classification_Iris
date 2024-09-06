@@ -1,6 +1,14 @@
 # app.py
 from flask import Flask, render_template, request
-from model import predict_iris
+
+import pickle
+# load
+with open('model_iris.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+def predict_iris(features):
+    prediction = model.predict([features])
+    return prediction[0]
 
 app = Flask(__name__)
 
